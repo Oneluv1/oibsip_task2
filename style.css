@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 99;
+  font-family: cursive;
+}
+.navbar {
+  width: 100%;
+  margin: auto;
+  background-color: #f5f6fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: solid hsl(0, 12%, 90%);
+}
+.navbar p {
+  font-size: 20px;
+  padding-left: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  color: rgb(136, 0, 255);
+}
+.logo:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+.logo {
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+
+.navbar ul,
+a {
+  list-style: none;
+  display: inline-block;
+  text-decoration: none;
+  justify-content: space-between;
+  font-weight: 600;
+}
+ul a {
+  padding-right: 20px;
+}
+ul a:hover {
+  color: brown;
+  transition: 0.2s ease;
+}
+.info {
+  width: 45%;
+  margin-left: 3%;
+  margin-top: 3%;
+  line-height: 32px;
+  text-align: justify;
+}
+.info h3 {
+  color: #19181a;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 0.7s;
+}
+.info h2,
+p,
+h5 {
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1.5s;
+}
+.info p {
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s;
+}
+.info span {
+  color: rgb(215, 99, 10);
+}
+h5 span {
+  font-weight: 600;
+}
+/* h3 span {
+  color: rgb(215, 99, 10);
+}
+h2 span {
+  color: rgb(215, 99, 10);
+}
+h5 {
+  font-size: 18px;
+}
+h5 span {
+  color: rgb(215, 99, 10);
+}*/
+p span {
+  color: rgb(215, 99, 10);
+  font-weight: 600;
+}
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  width: 180px;
+  padding: 12px 20px;
+  margin-left: 20%;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background: rgb(30, 28, 28);
+
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  animation: slideUp 1s ease forwards;
+  animation-delay: 0.7s;
+}
+.btn:hover {
+  color: rgb(215, 99, 10);
+  background: transparent;
+  border: 2px solid rgb(30, 28, 28);
+}
+.pix {
+  width: 50%;
+  height: 85%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.pix img {
+  position: absolute;
+  max-width: 85%;
+  max-height: 100%;
+  left: 15%;
+  transition: left 3s ease;
+}
+.pix:hover .my-pix {
+  left: 5%;
+}
+.icon {
+  color: #19181a;
+  margin-left: 3%;
+  margin-top: 30px;
+}
+.icon i {
+  cursor: pointer;
+  color: rgb(54, 71, 128);
+  margin-right: 10px;
+  font-size: 28px;
+  transition: 0.2s ease-in-out;
+  opacity: 0;
+  animation: slideDown 1s ease forwards;
+  animation-delay: 0.7s;
+}
+.icon i:hover {
+  color: rgb(215, 99, 10);
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
